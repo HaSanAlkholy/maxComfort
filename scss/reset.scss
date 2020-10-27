@@ -63,10 +63,6 @@ h6 {
   font-display: swap;
 }
 
-
-
-
-
 body,
 html {
   scroll-behavior: smooth;
@@ -200,6 +196,6 @@ ul {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 0;
-  box-shadow: inset 0 0 10px rgb(65, 65, 65);
+  box-shadow: inset 0 0 10px #4141414d;
   background:$color1;
 }

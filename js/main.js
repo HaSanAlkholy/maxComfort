@@ -139,14 +139,10 @@ $(window).on('load', function () {
         spaceBetween: 30
       },
       // when window width is >= 480px
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
-      // when window width is >= 250px
       150: {
-        slidesPerView: 1,
-      }
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
     },
 
     // If we need pagination

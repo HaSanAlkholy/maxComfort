@@ -196,7 +196,7 @@ ul {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 0;
-  box-shadow: inset 0 0 10px #414141;
+  box-shadow: inset 0 0 10px #4141414d;
   background: #45d8f9;
 }
 /*# sourceMappingURL=reset.css.map */

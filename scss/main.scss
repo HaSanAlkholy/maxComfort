@@ -74,7 +74,7 @@
     .swiper-button-next {
         color: rgb(179, 179, 179);
         transition: all 0.5s;
-        top: 50%;
+        top: 40%;
 
         &:after {
             font-size: 18px;
@@ -383,7 +383,7 @@ nav {
             img {
                 max-width: 100%;
                 @media (max-width: 992px) {
-                    max-width: 75%;
+                    max-width: 85%;
                 }
             }
         }
@@ -403,14 +403,21 @@ nav {
                 align-items: center;
 
                 .ico {
-                    font-size: 18px;
+                    font-size: 24px;
                     color: black;
                     transition: all 0.5s;
                     margin-inline-end: 5px;
                 }
 
+                .txt{
+                    transition: all 0.5s;
+                }
+
                 &:hover {
                     .ico {
+                        color: $color1;
+                    }
+                    .txt {
                         color: $color1;
                     }
                 }
@@ -693,7 +700,7 @@ nav {
 .up {
     height: 50px;
     width: 50px;
-    background-color: #236ac7a6;
+    background-color: #46d8f8e8;
     right: 20px;
     bottom: 30px;
     color: white;
@@ -767,11 +774,12 @@ nav {
             font-size: 20px;
             border-radius: 0;
             border: none;
-            border-bottom: 1px solid rgb(64, 64, 64);
+            border-bottom: 1px solid #c7c7c7;
             font-family: "Tajawal";
             background-color: transparent;
             padding: 0 20px;
             outline: none;
+            transition: all 0.5s;
 
             @media (max-width: 576px) {
                 padding: 0 15px;
@@ -781,6 +789,10 @@ nav {
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus {
                 background-color: transparent;
+            }
+
+            &:focus{
+                border-bottom: 1px solid $color1;
             }
 
             // &::placeholder{
@@ -800,9 +812,14 @@ nav {
             background-color: transparent;
             line-height: 3.75;
             font-size: 30px;
-
+            transition: all 0.5s;
+            
             @media (max-width: 576px) {
                 left: 30px;
+            }
+
+            &:hover{
+                color:$color1;
             }
         }
     }
@@ -884,6 +901,11 @@ nav {
                 padding: 0 20px;
                 border-radius: 50px;
                 margin-bottom: 23px;
+                transition: all 0.5s;
+
+                &:focus{
+                    border: 1px solid $color1;
+                }
             }
 
             .forget {
@@ -1062,8 +1084,8 @@ header {
     margin-bottom: 100px;
 
     @media (max-width: 576px) {
-        margin-top: 20px;
-        margin-bottom: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     .container {
@@ -1118,7 +1140,7 @@ header {
             }
 
             h3 {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: TajawalBold;
                 transition: all 0.5s;
 
@@ -1532,6 +1554,7 @@ footer {
                     padding-right: 30px;
                     line-height: 4;
                     border: none;
+                    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
 
                     &::placeholder {
                         font-size: 14px;
@@ -1596,10 +1619,11 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
+        padding-bottom:10px;
 
         img {
-            margin: 0 10px;
+            margin: 0 15px;
         }
 
         @media (max-width: 576px) {
