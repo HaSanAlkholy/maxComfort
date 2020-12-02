@@ -1463,7 +1463,7 @@ footer {
     .footer-top {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
 
         @media (max-width: 992px) {
             justify-content: center;
@@ -1479,6 +1479,16 @@ footer {
                 font-weight: 700;
                 font-family: TajawalBold;
                 font-size: 16px;
+
+                span {
+                    font-size: 14px;
+                    transition: all 0.5s;
+                    display: none;
+
+                    @media (max-width: 992px) {
+                        display: inline;
+                    }
+                }
             }
         }
 
@@ -1499,18 +1509,46 @@ footer {
             }
         }
 
-        .account,
-        .adds,
-        .cust,
-        .info {
+        .footer-list {
+            transition: all 0.5s;
+            order:2;
+
+            hr {
+                margin-bottom: 30px;
+            }
+
             @media (max-width: 992px) {
-                display: none;
+                width: 100%;
+                .head {
+                    h4 {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    hr {
+                        display: none;
+                    }
+                }
+                ul {
+                    text-align: start;
+                }
+            }
+        }
+
+        .footer-list-active {
+            .head {
+                h4 {
+                    span {
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
 
         .mail {
             width: 355px;
             max-width: 100%;
+            margin-bottom:50px;
             h4 {
                 margin-bottom: 25px;
                 font-size: 16px;

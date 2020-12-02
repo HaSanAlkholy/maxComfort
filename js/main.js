@@ -95,6 +95,31 @@ $(window).on('load', function () {
   window.addEventListener('resize', changeSlide);
 
 
+    // add footer collabse
+    function addCollapse() {
+      console.log('resize');
+      if (window.innerWidth <= 992) {
+        $('.footer-list').attr("data-toggle", "collapse");
+        $('.footer-list ul').addClass('collapse');
+      } else {
+        $('.footer-list').attr("data-toggle", "none");
+        $('.footer-list ul').removeClass('collapse');
+        $('.footer-list ul').css('height', 'auto');
+      }
+    }
+  
+    addCollapse();
+    window.addEventListener("resize", addCollapse);
+  
+  
+    $(".footer-list").on("click", function (e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        $(this).toggleClass("footer-list-active");
+      }
+    });
+
+
 
   var mySwiper = new Swiper('header .swiper-container', {
     // Optional parameters

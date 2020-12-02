@@ -1747,7 +1747,7 @@ footer .row > div {
 footer .footer-top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 992px) {
@@ -1765,6 +1765,18 @@ footer .footer-top .head h4 {
   font-weight: 700;
   font-family: TajawalBold;
   font-size: 16px;
+}
+
+footer .footer-top .head h4 span {
+  font-size: 14px;
+  transition: all 0.5s;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  footer .footer-top .head h4 span {
+    display: inline;
+  }
 }
 
 footer .footer-top li {
@@ -1787,18 +1799,40 @@ footer .footer-top li:hover a {
   color: #45d8f9;
 }
 
+footer .footer-top .footer-list {
+  transition: all 0.5s;
+  order: 2;
+}
+
+footer .footer-top .footer-list hr {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 992px) {
-  footer .footer-top .account,
-  footer .footer-top .adds,
-  footer .footer-top .cust,
-  footer .footer-top .info {
+  footer .footer-top .footer-list {
+    width: 100%;
+  }
+  footer .footer-top .footer-list .head h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .footer-top .footer-list .head hr {
     display: none;
   }
+  footer .footer-top .footer-list ul {
+    text-align: start;
+  }
+}
+
+footer .footer-top .footer-list-active .head h4 span {
+  transform: rotate(180deg);
 }
 
 footer .footer-top .mail {
   width: 355px;
   max-width: 100%;
+  margin-bottom: 50px;
 }
 
 footer .footer-top .mail h4 {
